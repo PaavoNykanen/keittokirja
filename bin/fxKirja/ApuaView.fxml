@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="500.0" style="-fx-background-color: antiqueWhite;" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea editable="false" layoutX="7.0" layoutY="7.0" prefHeight="486.0" prefWidth="486.0" text="Tähän voidaan kirjoittaa avusteita ohjelman toiminnoista, kuten esim:&#10;&#10;Raaka-aineen lisääminen reseptiin:&#10;Tuplaklikkaa reseptiä tai raaka-ainetta, ja avautuu uusi ikkuna, jossa&#10;pääset muokkaamaan valittua reseptiä. Täältä voit myös lisätä puuttuvia&#10;osia reseptiin, kuten raaka-aineita.&#10;Samaan muokkausnäkymään mennään, kun lisätään uutta reseptiä.&#10;&#10;Hakuehdosta klikkaamalla voit valita, suodatatko reseptejä reseptin nimen, vai raaka-&#10;aineen nimen perusteella.&#10;&#10;Jos haluat poistaa raaka-aineen reseptistä, tee se muokkausikkunassa.&#10;Eli tuplaklikkaa raaka-ainetta ja kumita poistettavan aineen teksti siitä pois,&#10;paina tallenna. Käyttöliittymä päivittää tyhjät raaka-aineet pois, kun tallennat&#10;päänäkymästä vasemmalta ylhäältä tiedosto-&gt;tallenna.&#10;&#10;&#10;Jos sinulla on kysyttävää ohjelmaan tai sen toimintaan liittyen, ota rohkeasti&#10;yhteyttä meihin ===&gt;&#10;&#10;opiskelijankeittokirja@help.fi *** &#10;&#10;&#10;&#10;&#10;&#10;*** sähköposti ei oikeasti käytössä :D">
+               <font>
+                  <Font name="DejaVu Sans Oblique" size="12.0" />
+               </font>
+            </TextArea>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

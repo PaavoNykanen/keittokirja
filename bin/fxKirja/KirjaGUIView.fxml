@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import fi.jyu.mit.fxgui.ListChooser?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="620.0" prefWidth="750.0" style="-fx-background-color: floralwhite; -fx-border-color: floralwhite;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fxKirja.KirjaGUIController">
+   <left>
+      <VBox prefHeight="200.0" prefWidth="200.0" spacing="10.0" style="-fx-background-color: snow;" BorderPane.alignment="CENTER">
+         <children>
+            <MenuButton fx:id="hakuehtoDrop" mnemonicParsing="false" opacity="0.6" prefHeight="46.0" prefWidth="200.0" text="Hakuehto...">
+              <items>
+                <MenuItem fx:id="hakuRaaka" mnemonicParsing="false" onAction="#vaihdaRaaka" text="Raaka-aineet" />
+                <MenuItem fx:id="hakuReseptit" mnemonicParsing="false" onAction="#vaihdaReseptit" text="Reseptit" />
+              </items>
+               <font>
+                  <Font name="System Italic" size="11.0" />
+               </font>
+            </MenuButton>
+            <TextField fx:id="hakuPalkki" onKeyPressed="#hakemaan" prefHeight="41.0" prefWidth="200.0">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </TextField>
+            <StackPane prefHeight="23.0" prefWidth="200.0">
+               <children>
+                  <Label text="Reseptit">
+                     <font>
+                        <Font name="System Bold Italic" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </StackPane>
+            <ListChooser fx:id="reseptiLista" fixedCellSize="50.0" onMouseClicked="#muokkaamaan" opacity="0.9" rivit="Lasagne&#10;Pyttipannu&#10;Makaronilaatikko&#10;Kalakeitto&#10;Kinkkukiusaus&#10;Rullakebab&#10;Kana-nuudelikeitto&#10;" />
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <ToolBar prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: floralwhite;" BorderPane.alignment="CENTER">
+         <items>
+            <MenuButton mnemonicParsing="false" text="Tiedosto">
+              <items>
+                <MenuItem fx:id="tallennaMenu" mnemonicParsing="false" onAction="#tallenna" text="Tallenna" />
+                  <MenuItem fx:id="tulostaMenu" mnemonicParsing="false" onAction="#handleTulosta" text="Tulosta" />
+                  <MenuItem fx:id="lopetaMenu" mnemonicParsing="false" onAction="#quit" text="Lopeta" />
+              </items>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" text="Muokkaa">
+              <items>
+                <MenuItem fx:id="muokkaaMenu" mnemonicParsing="false" onAction="#lisaaResepti" text="Lisää resepti" />
+                <MenuItem fx:id="lisaaMenu" mnemonicParsing="false" onAction="#muokkaamaan1" text="Muokkaa reseptiä" />
+                  <MenuItem fx:id="poistaMenu" mnemonicParsing="false" onAction="#poistaResepti" text="Poista resepti" />
+              </items>
+            </MenuButton>
+            <MenuButton mnemonicParsing="false" text="Apua">
+              <items>
+                <MenuItem fx:id="apuaMenu" mnemonicParsing="false" onAction="#showHelp" text="Apua" />
+                <MenuItem fx:id="tietojaMenu" mnemonicParsing="false" onAction="#showInfo" text="Tietoja..." />
+              </items>
+            </MenuButton>
+         </items>
+      </ToolBar>
+   </top>
+   <right>
+      <VBox fx:id="vBoxResepti" prefHeight="580.0" prefWidth="265.0" style="-fx-background-color: snow;" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="ohjeLaatikko" editable="false" onMouseClicked="#muokkaamaan" opacity="0.9" prefHeight="506.0" prefWidth="266.0" text="apsdl&#10;" wrapText="true">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextArea>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" prefHeight="32.0" prefWidth="140.0" text="Valmistusaika">
+                     <font>
+                        <Font name="System Bold Italic" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="valmistusAika" editable="false" onMouseClicked="#muokkaamaan">
+                     <HBox.margin>
+                        <Insets top="3.0" />
+                     </HBox.margin>
+                  </TextField>
+               </children>
+            </HBox>
+            <Label prefHeight="0.0" prefWidth="243.0" text="Lähde">
+               <font>
+                  <Font name="Malgun Gothic Semilight" size="18.0" />
+               </font>
+            </Label>
+            <TextField fx:id="lahde" onMouseClicked="#muokkaamaan" />
+         </children>
+      </VBox>
+   </right>
+   <center>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: snow;" BorderPane.alignment="CENTER">
+         <children>
+            <ListChooser fx:id="maaraLista" fixedCellSize="35.0" onMouseClicked="#muokkaamaan" opacity="0.9" prefHeight="580.0" prefWidth="89.0" />
+            <ListChooser fx:id="aineLista" fixedCellSize="35.0" onMouseClicked="#muokkaamaan" opacity="0.9" />
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
