@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="438.0" prefWidth="662.0" style="-fx-background-color: floralWhite;" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="206.0" layoutY="31.0" prefHeight="61.0" prefWidth="250.0" text="Keittokirjan tekijät">
+               <font>
+                  <Font name="Monotype Corsiva" size="27.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="91.0" layoutY="84.0" prefHeight="61.0" prefWidth="250.0" text="Karri Kalliala">
+               <font>
+                  <Font name="Monotype Corsiva" size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="341.0" layoutY="84.0" prefHeight="61.0" prefWidth="250.0" text="Paavo Nykänen">
+               <font>
+                  <Font name="Monotype Corsiva" size="22.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="151.0" layoutY="253.0" prefHeight="107.0" prefWidth="360.0" text="JYU Ohjelmointi 2 Harjoitustyö">
+               <font>
+                  <Font name="Gentium Book Basic" size="21.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="91.0" layoutY="124.0" prefHeight="61.0" prefWidth="250.0" text="karri.h.kalliala@student.jyu.fi">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+            <Label alignment="CENTER" layoutX="341.0" layoutY="124.0" prefHeight="61.0" prefWidth="250.0" text="paaljuny@student.jyu.fi">
+               <font>
+                  <Font name="SansSerif Regular" size="12.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
